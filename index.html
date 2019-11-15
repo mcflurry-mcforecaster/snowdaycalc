@@ -49,9 +49,26 @@
             <h2 style="text-align: center; color: black">Contact Us</h2>
           </div>
 
-          <div class="inbound-form-wrapper" id="form_2104" data-path="https://app.99inbound.com/i/10e79a0d-d2dc-4b93-b0c7-12d02dcf61a4" data-token="MMwJ8nyRioBhT1gDjTdFEgtt"></div>
-
-<script type="text/javascript" src="https://app.99inbound.com/99inbound.js"></script>
+         <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
      
 
         </div>
