@@ -1,6 +1,6 @@
+
 $(document).ready(function(){
 
-//make dictionary of icons
 var icons = {
   t01d: "https://www.weatherbit.io/static/img/icons/t01d.png",
   t01n: "https://www.weatherbit.io/static/img/icons/t01n.png",
@@ -75,41 +75,36 @@ var icons = {
     var cond = dat.data[1].weather.description;
     var ic = dat.data[1].weather.icon;
 
-    //probablities
-    var probclose = 0.5979039;
-    var probdelay = .0004807;
+    var probclose = 0.5979;
+    var probdelay = .0005;
     var close = probclose>50
     var delay = probdelay>50
     document.getElementById("num1").innerHTML = ""+probclose+"%";
     document.getElementById("num2").innerHTML = ""+probdelay+"%";
-
     document.getElementById("icon").title = cond;
 
-    //display background image based on school/noschool
     if(close){
       document.body.style.backgroundImage = "url('https://i.giphy.com/media/Yy26NRbpB9lDi/200.webp')"; }
     else{
       document.body.style.backgroundImage = "url('https://media3.giphy.com/media/OaWOfqUkDJI7m/source.gif')"; }
 
-    //set data values for html display
-    // console.log(ic)
     document.getElementById('icon').src = icons[ic]; 
     document.getElementById("temperature").innerHTML = temp; 
     document.getElementById("snow").innerHTML=snowdepth;
     
-  
-    //about, contact pop ups
     var modal = document.getElementById("mod");
     var btn1 = document.getElementById("con");
     var span1 = document.getElementById("x");
     var abt = document.getElementById("abt");
     var btn2 = document.getElementById("about");
     var span2 = document.getElementById("x2");
+
     btn2.onclick = function() {
       abt.style.display="block";
     }
     btn1.onclick = function(){
-      modal.style.display="block";
+      modal.style.display = "block";
+      //$('#form_2104').show();
     }
     span1.onclick = function(){
       modal.style.display = "none";
@@ -117,33 +112,18 @@ var icons = {
     span2.onclick = function(){
       abt.style.display = "none";
     }
-    // window.onclick = function(event) {
-    // if (event.target == modal) {
-    //   modal.style.display = "none";
-    // }
-  //}
+    
+  
+  //for next day: new Date().getTime() + 24 * 60 * 60 * 1000
+  document.getElementById("date").innerHTML = new Date().toDateString();
 
-  //next day's date
-  //for next day:
-  //new Date().getTime() + 24 * 60 * 60 * 1000
-  document.getElementById("date").innerHTML = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toDateString();
-
-  //message
   if(close){
     document.getElementById("message").innerHTML = "Get ready to relax!";
   }
   else{
     document.getElementById("message").innerHTML="Go do your homework.";
   }
-
-  
-
 })
-
-
-
-
-
 })
 
 
