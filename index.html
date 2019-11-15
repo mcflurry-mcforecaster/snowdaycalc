@@ -1,23 +1,9 @@
-<!-- Website Names
-Gilly Glizzard Girl
-Billy's Best Friend
-Friendly Flurry Forecaster
-Snowy
-Sarah Snow Student
-Winter Weather Watch
-Flurry Forecast[er]
-Frosty
-Billy Blizzard Girl
 
-Frosty the Forecaster?
- -->
 
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- icon -->
-    <!-- http://www.pngmart.com/files/3/Snowflakes-Transparent-PNG.png -->
-    <link rel="icon" href="http://www.pngmart.com/files/3/Snowflakes-Transparent-PNG.png">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQb0ts7rvp2mkVr31RQMoqkgcXX0wEzxj2-9JbayuIiGH482Y-f">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Snowy</title>
@@ -29,9 +15,7 @@ Frosty the Forecaster?
     <script src = "script.js"></script>
     
     <div class="box">
-      <!-- <div class = "img__wrap"> -->
       <img id="icon"></img>
-      <!-- </div> -->
       <div class="percent1">
         <div id="date"></div></br>
         Chance of Closure:</br></br>
@@ -39,15 +23,14 @@ Frosty the Forecaster?
         Chance of 2hr Delay:</br></br>
         <div id="num2" class="num"></div>
       </div>
-      <!-- todo: change snow depth to pic of snowflake -->
       <div class = "info">
       Temperature: <a id = "temperature"></a><span>&#176; F</span><br>
       <p style = "line-height: 1em">Snow Depth: <a id="snow"></a> in</p>
-      </div></br></br>
-      <div id="message"></div>
+      </div></br>
+      <div id="message"></div></br>
       <div class = "update">
       Weather Data from Weatherbit.io; updates every 30-60 minutes</br>
-      Probabilities Last Updated: 11/13/2019 6:12 PM
+      Probabilities Last Updated: 11/14/2019 6:36 PM
       </div>
       <div class = "close">
       </div>
@@ -59,40 +42,17 @@ Frosty the Forecaster?
       </div>
     </div>
 
-
       <div id="mod" class="modal">
         <div class="mod-content">
           <div class="modal-header">
             <span class="close" id="x">&times; </span>
-            <h2 style="text-align: center;">Contact Us</h2>
+            <h2 style="text-align: center; color: black">Contact Us</h2>
           </div>
 
-          <form action="https://formspree.io/mrggapyr" method="POST">
-          </br>
-          <div class="text" style="color:#7c7c7c">
-            We'd love your feedback!
-          </div></br>
-          <label class="text">  
-            Your email:
-            </br>
-            <input type="text" name="_replyto">
-          </label></br></br>
-          
-          <label class="text">
-            Your message:
-            </br>
-            <textarea id="message2"></textarea>
-          </label></br>
+          <div class="inbound-form-wrapper" id="form_2104" data-path="https://app.99inbound.com/i/10e79a0d-d2dc-4b93-b0c7-12d02dcf61a4" data-token="MMwJ8nyRioBhT1gDjTdFEgtt"></div>
 
-          <!-- your other form fields go here -->
-
-          <button id="submit">Send</button>
-          </form>
-          </br></br>
-          <div class="text">
-            Follow us on social media!</br>
-            Twitter:
-          </div>
+<script type="text/javascript" src="https://app.99inbound.com/99inbound.js"></script>
+     
 
         </div>
       </div>
@@ -104,22 +64,14 @@ Frosty the Forecaster?
               <h2 style="text-align: center">About</h2>
             </div>
 
-            <p style="line-height: 1.6; color: grey; margin-left: 1em">
+            <p style="line-height: 1.6; color:#636363; margin-left: 1em; margin-right: 1em">
               &emsp;Hi! We're two high schoolers from Montgomery Blair High School in Montgomery County, MD. This snow day predictor is inspired by our friend, <a href="www.billyblizzardboy.weebly.com">Billy</a>!
             </br>
-              &emsp;We created logistic regression models to predict the chance of a school closure and a 2 hour delay. We used historical weather data (November 2015-April 2019) from <a href="">Weather Underground</a> and the <a href="">National Oceanic and Atmospheric Administration.</a></br>
-              <img src="4-way Plot.png" style="width: 60%; height: auto;"/>
-              <p style="float: right">
-                The predictors for closure and delays are plotted. The area under the ROC curve, a measure of model accuracy, for the closure model is 0.883 and is 0.9254 for the delay model.
-              </p>
-              
-           
-            <!-- insert plot image? yeah! -->
+              &emsp;We used historical weather data (November 2015-April 2019) from <a href="">Weather Underground</a> and the <a href="">National Oceanic and Atmospheric Administration.</a> School closure and delay data was manually collected from the MCPS's Twitter. We created logistic regression models to predict the chance of a school closure and a 2 hour delay. Upon analyzing correlations among various weather conditions, we determined the significant covariates for each outcome: minimum temperature, max wind speed, snowdepth, and previous snow day for closures, previous snowday, average temperature, minimum temperature, and average dewpoint for delays. The area under the ROC curve, a measure of model accuracy, is 0.883 for the closure model and 0.9254 for the delay model. </br>
+              &emsp;We hope to improve our prediction accuracy by gathering data from earlier years, as well as testing machine learning algorithms to optimize our model. 
           </p>
           </div>
         </div>
-      <!-- </div> -->
-
       
 
   </body>
