@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+//dictionary of encoded weather icon images
 var icons = {
   t01d: "https://www.weatherbit.io/static/img/icons/t01d.png",
   t01n: "https://www.weatherbit.io/static/img/icons/t01n.png",
@@ -68,6 +68,7 @@ var icons = {
   u00n: "https://www.weatherbit.io/static/img/icons/u00n.png"
 }
 
+  //get forecasts from api
   $.getJSON("https://api.weatherbit.io/v2.0/forecast/daily?city=Clarksburg,MD&units=I&key=8cafe4919ef441e58c20000e186c303d", function(dat){
     console.log(dat.data[1])
     var snowdepth = dat.data[1].snow_depth;
@@ -75,6 +76,7 @@ var icons = {
     var cond = dat.data[1].weather.description;
     var ic = dat.data[1].weather.icon;
 
+    //manually input probablities
     var probclose = 0.5979;
     var probdelay = .0005;
     var close = probclose>50
@@ -83,8 +85,10 @@ var icons = {
     document.getElementById("num2").innerHTML = ""+probdelay+"%";
     document.getElementById("icon").title = cond;
 
+    //display school gif for no closure
     if(close){
       document.body.style.backgroundImage = "url('https://i.giphy.com/media/Yy26NRbpB9lDi/200.webp')"; }
+      //display snow gif for predictied closure
     else{
       document.body.style.backgroundImage = "url('https://media3.giphy.com/media/OaWOfqUkDJI7m/source.gif')"; }
 
@@ -92,6 +96,7 @@ var icons = {
     document.getElementById("temperature").innerHTML = temp; 
     document.getElementById("snow").innerHTML=snowdepth;
     
+    //make about and contact us modals to show on button clicks
     var modal = document.getElementById("mod");
     var btn1 = document.getElementById("con");
     var span1 = document.getElementById("x");
@@ -112,11 +117,11 @@ var icons = {
     span2.onclick = function(){
       abt.style.display = "none";
     }
-    
   
   //for next day: new Date().getTime() + 24 * 60 * 60 * 1000
   document.getElementById("date").innerHTML = new Date().toDateString();
 
+  //set message according to school/no school
   if(close){
     document.getElementById("message").innerHTML = "Get ready to relax!";
   }
