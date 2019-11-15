@@ -5,7 +5,7 @@ background-size: 100%;
 
 .box{
   opacity: 94%;
-   z-index: -1; 
+  z-index: -1; 
   position: absolute;
   left: 0;
   right: 0;
@@ -14,7 +14,7 @@ background-size: 100%;
   width: 700px;
   height: 490px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: -10px;
   background: #e3ffff;
   
 }
@@ -29,7 +29,6 @@ background-size: 100%;
   visibility: hidden;
   opacity: 0;
 
-  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 
