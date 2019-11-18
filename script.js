@@ -76,9 +76,9 @@ var icons = {
     var cond = dat.data[1].weather.description;
     var ic = dat.data[1].weather.icon;
 
-    //manually input probablities
-    var probclose = 0;
-    var probdelay = 0;
+    //manually get probablities from r
+    var probclose = 0.183;
+    var probdelay = 0.592;
     var close = probclose>50
     var delay = probdelay>50
     document.getElementById("num1").innerHTML = ""+probclose+"%";
@@ -119,7 +119,7 @@ var icons = {
     }
   
   //for next day: new Date().getTime() + 24 * 60 * 60 * 1000
-  document.getElementById("date").innerHTML = new Date().toDateString();
+  document.getElementById("date").innerHTML = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toDateString();
 
   //set message according to school/no school
   if(close){
