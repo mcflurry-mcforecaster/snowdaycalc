@@ -119,7 +119,7 @@ var icons = {
     }
   
   //for next day: new Date().getTime() + 24 * 60 * 60 * 1000
-  document.getElementById("date").innerHTML = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toDateString();
+  document.getElementById("date").innerHTML = new Date(new Date().getTime() + 3*(24 * 60 * 60 * 1000)).toDateString();
 
   //set message according to school/no school
   if(close){
