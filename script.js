@@ -86,7 +86,7 @@ var icons = {
     document.getElementById("icon").title = cond;
 
     //display school gif for no closure
-    if(close){
+    if(close || delay){
       document.body.style.backgroundImage = "url('https://i.giphy.com/media/Yy26NRbpB9lDi/200.webp')"; }
       //display snow gif for predictied closure
     else{
@@ -126,6 +126,8 @@ var icons = {
   if(close){
     document.getElementById("message").innerHTML = "Get ready to relax!";
   }
+  else if(delay){
+    document.getElementById("message").innerHTML = "Set your alarm two hours back!";
   else{
     document.getElementById("message").innerHTML="Go do your homework.";
   }
