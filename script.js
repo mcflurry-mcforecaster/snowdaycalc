@@ -127,7 +127,7 @@ var icons = {
     document.getElementById("message").innerHTML = "Get ready to relax!";
   }
   else if(delay){
-    document.getElementById("message").innerHTML = "Set your alarm two hours back!";
+    document.getElementById("message").innerHTML = "Set your alarm two hours back!";}
   else{
     document.getElementById("message").innerHTML="Go do your homework.";
   }
