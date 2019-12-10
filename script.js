@@ -77,7 +77,7 @@ var icons = {
     var ic = dat.data[1].weather.icon;
 
     //manually get probablities from r
-    var probclose = 0.472;
+    var probclose = 4.720;
     var probdelay = 10.814;
     var close = probclose>50
     var delay = probdelay>50
