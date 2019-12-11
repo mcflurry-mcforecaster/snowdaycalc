@@ -77,8 +77,8 @@ var icons = {
     var ic = dat.data[1].weather.icon;
 
     //manually get probablities from r
-    var probclose = 1.29;
-    var probdelay = 64.9;
+    var probclose = 0;
+    var probdelay = 0;
     var close = probclose>50
     var delay = probdelay>50
     document.getElementById("num1").innerHTML = ""+probclose+"%";
@@ -119,8 +119,7 @@ var icons = {
     }
   
   //for next day: new Date().getTime() + 24 * 60 * 60 * 1000
-    //new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toDateString()
-  document.getElementById("date").innerHTML =  "Wed Dec 11 2019";
+    document.getElementById("date").innerHTML = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toDateString()
 
   //set message according to school/no school
   if(close){
