@@ -78,7 +78,7 @@ var icons = {
 
     //manually get probablities from r
     var probclose = 12.8;
-    var probdelay = 54.8;
+    var probdelay = 58.8;
     var close = probclose>50
     var delay = probdelay>50
     document.getElementById("num1").innerHTML = ""+probclose+"%";
@@ -119,7 +119,7 @@ var icons = {
     }
   
   //for next day: new Date().getTime() + 24 * 60 * 60 * 1000
-    document.getElementById("date").innerHTML = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toDateString()
+    document.getElementById("date").innerHTML =new Date().getTime().toDateString()
 
   //set message according to school/no school
   if(close){
